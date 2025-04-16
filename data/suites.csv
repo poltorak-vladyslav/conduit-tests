@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2608","try to create an article without mandatory fields","chromium","Wed Apr 16 05:45:30 UTC 2025","passed","Wed Apr 16 05:45:33 UTC 2025","Articles Feature","new.article.spec.js","",""
+"","3423","successful login","chromium","Wed Apr 16 05:45:22 UTC 2025","passed","Wed Apr 16 05:45:25 UTC 2025","Login Feature","login.spec.js","",""
+"","1901","failed login","chromium","Wed Apr 16 05:45:25 UTC 2025","passed","Wed Apr 16 05:45:27 UTC 2025","Login Feature","login.spec.js","",""
+"","2858","successfully create an article with all fields","chromium","Wed Apr 16 05:45:27 UTC 2025","passed","Wed Apr 16 05:45:30 UTC 2025","Articles Feature","new.article.spec.js","",""
