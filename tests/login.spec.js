@@ -1,4 +1,4 @@
-import { test } from '@fixtures//page-fixtures';
+import { test } from '@fixtures/page-fixtures';
 import { getInvalidCredentials, getValidCredentials } from "@utils/credentials-utils";
 import { EMAIL_OR_PASSWORD_IS_INVALID } from "@constants/error-messages";
 
