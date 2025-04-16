@@ -1,0 +1,42 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: ⬇️ Checkout code
+      uses: actions/checkout@v4
+
+    - name: ⚙️ Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: 📦 Install dependencies
+      run: npm ci
+
+    - name: 🧪 Install Playwright browsers
+      run: npx playwright install --with-deps
+
+    - name: 🧪 Run Playwright tests
+      env:
+        VALID_EMAIL: ${{ secrets.VALID_EMAIL }}
+        VALID_PASSWORD: ${{ secrets.VALID_PASSWORD }}
+      run: npm run test:all
+
+    - name: 📊 Generate Allure report
+      run: npm run allure:report
+
+    - name: 🚀 Deploy Allure report to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./reports/allure-report
+        publish_branch: gh-pages
