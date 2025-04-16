@@ -1,0 +1,7 @@
+.idea
+.env
+# Playwright
+node_modules/
+reports/
+/blob-report/
+/playwright/.cache/
